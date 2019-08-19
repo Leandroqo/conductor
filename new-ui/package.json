@@ -6,8 +6,15 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "validator": "yarn test && yarn lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn validator"
+    }
   },
   "dependencies": {
     "react": "^16.9.0",
@@ -28,10 +35,14 @@
     "enzyme-to-json": "^3.4.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.4",
     "jest": "^24.9.0",
     "react-hot-loader": "^4.12.11",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "tslint-origin-ordered-imports-rule": "^1.2.2",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.5.3",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
