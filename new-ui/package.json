@@ -1,0 +1,52 @@
+{
+  "name": "nf-workflow-ui",
+  "version": "1.0.0",
+  "description": "Conductor user interface",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "validator": "yarn test && yarn lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn validator"
+    }
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@svgr/webpack": "^4.3.2",
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.17",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/styled-components": "^4.1.18",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "react-hot-loader": "^4.12.11",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "tslint-origin-ordered-imports-rule": "^1.2.2",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

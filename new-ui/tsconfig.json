@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es5",
+    "module": "es6",
+    "lib": ["es6", "es7", "dom"],
+    "jsx": "react",
+    "declaration": false,
+    "outDir": "dist",
+    "removeComments": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "modules/*": ["./modules/*"],
+      "core/*": ["./core/*"]
+    },
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+  },
+  "exclude": ["build", "node_modules"]
+}
