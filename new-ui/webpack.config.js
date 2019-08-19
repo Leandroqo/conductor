@@ -1,4 +1,4 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
 const path = require('path');
 const package = require('./package.json');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
