@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
+    "build": "webpack -p --progress --colors",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
